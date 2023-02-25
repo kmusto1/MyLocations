@@ -221,3 +221,5 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     }
 
 }
+
+// page 589
