@@ -26,6 +26,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var lastGeocodingError: Error?
     var timer: Timer?
     
+    // Updates labels on load.
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
@@ -51,6 +52,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     }
     
     // MARK: - Actions
+    // Gets location permissions.
     @IBAction func getLocation() {
         let authStatus = locationManager.authorizationStatus
         if authStatus == .notDetermined {
@@ -74,6 +76,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     }
     
     // MARK: - Helper Methods
+    // Prompts user to enable location services.
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(
             title: "Location Services Disabled",
@@ -86,6 +89,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         present(alert, animated: true, completion: nil)
     }
     
+    // Updates labels.
     func updateLabels() {
         if let location = location {
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
@@ -127,6 +131,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         configureGetButton()
     }
     
+    // Configures button.
     func configureGetButton() {
         if updatingLocation {
             getButton.setTitle("Stop", for: .normal)
@@ -135,6 +140,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         }
     }
     
+    // Gets users location.
     func startLocationManager() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -145,6 +151,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         }
     }
     
+    // Stops getting users location.
     func stopLocationManager() {
         if updatingLocation {
             locationManager.stopUpdatingLocation()
@@ -156,6 +163,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         }
     }
     
+    // Users location string.
     func string(from placemark: CLPlacemark) -> String {
         var line1 = ""
         if let tmp = placemark.subThoroughfare {
@@ -241,6 +249,3 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         }
     }
 }
-
-
-// page 633

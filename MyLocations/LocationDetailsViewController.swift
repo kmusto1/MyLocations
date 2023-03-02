@@ -9,10 +9,10 @@ import UIKit
 import CoreLocation
 
 private let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .medium
-    formatter.timeStyle = .short
-    return formatter
+  let formatter = DateFormatter()
+  formatter.dateStyle = .medium
+  formatter.timeStyle = .short
+  return formatter
 }()
 
 class LocationDetailsViewController: UITableViewController {
@@ -27,12 +27,14 @@ class LocationDetailsViewController: UITableViewController {
     var placemark: CLPlacemark?
     var categoryName = "No Category"
     
+    // Displays data.
     override func viewDidLoad() {
         super.viewDidLoad()
         
         descriptionTextView.text = ""
         categoryLabel.text = categoryName
         
+        // Formats label data.
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
         
@@ -43,6 +45,11 @@ class LocationDetailsViewController: UITableViewController {
         }
         
         dateLabel.text = format(date: Date())
+        
+        // Hides keyboard.
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        gestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecognizer)
     }
     
     // MARK: - Navigation
@@ -55,13 +62,20 @@ class LocationDetailsViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        guard let mainView = navigationController?.parent?.view else { return }
+        let hudView = HudView.hud(inView: mainView, animated: true)
+        hudView.text = "Tagged"
+        afterDelay(0.6) {
+            hudView.hide()
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
     }
     
+    // Updates category label with selected category name.
     @IBAction func categoryPickerDidPickCategory(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! CategoryPickerViewController
         categoryName = controller.selectedCategoryName
@@ -93,7 +107,34 @@ class LocationDetailsViewController: UITableViewController {
         return text
     }
     
+    // Formats date.
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
+    }
+    
+    // Hides keyboard.
+    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        descriptionTextView.resignFirstResponder()
+    }
+    
+    // MARK: - Table View Delegates
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.section == 0 || indexPath.section == 1 {
+            return indexPath
+        } else {
+            return nil
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            descriptionTextView.becomeFirstResponder()
+        }
     }
 }

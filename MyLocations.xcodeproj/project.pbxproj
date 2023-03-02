@@ -16,6 +16,8 @@
 		DDA6823529A4649A00F6C768 /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDA6823329A4649A00F6C768 /* MyLocations.xcdatamodeld */; };
 		DDA6823729A4649B00F6C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA6823629A4649B00F6C768 /* Assets.xcassets */; };
 		DDA6823A29A4649B00F6C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA6823829A4649B00F6C768 /* LaunchScreen.storyboard */; };
+		DDEE6B7129B05BAD00856B97 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE6B6F29B05BAC00856B97 /* Functions.swift */; };
+		DDEE6B7229B05BAD00856B97 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE6B7029B05BAC00856B97 /* HudView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DDA6823629A4649B00F6C768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA6823929A4649B00F6C768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA6823B29A4649B00F6C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDEE6B6F29B05BAC00856B97 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		DDEE6B7029B05BAC00856B97 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				DDA6823829A4649B00F6C768 /* LaunchScreen.storyboard */,
 				DDA6823B29A4649B00F6C768 /* Info.plist */,
 				DDA6823329A4649A00F6C768 /* MyLocations.xcdatamodeld */,
+				DDEE6B6F29B05BAC00856B97 /* Functions.swift */,
+				DDEE6B7029B05BAC00856B97 /* HudView.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 				DD7CE90E29AC53E20028BA5E /* CategoryPickerViewController.swift in Sources */,
 				DDA6822F29A4649A00F6C768 /* CurrentLocationViewController.swift in Sources */,
 				DDA6822B29A4649A00F6C768 /* AppDelegate.swift in Sources */,
+				DDEE6B7129B05BAD00856B97 /* Functions.swift in Sources */,
+				DDEE6B7229B05BAD00856B97 /* HudView.swift in Sources */,
 				DDA6823529A4649A00F6C768 /* MyLocations.xcdatamodeld in Sources */,
 				DDA6822D29A4649A00F6C768 /* SceneDelegate.swift in Sources */,
 				DD7CE90C29AA99250028BA5E /* LocationDetailsViewController.swift in Sources */,
