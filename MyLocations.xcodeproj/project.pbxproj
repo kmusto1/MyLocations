@@ -16,6 +16,8 @@
 		DDA6823529A4649A00F6C768 /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDA6823329A4649A00F6C768 /* MyLocations.xcdatamodeld */; };
 		DDA6823729A4649B00F6C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA6823629A4649B00F6C768 /* Assets.xcassets */; };
 		DDA6823A29A4649B00F6C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA6823829A4649B00F6C768 /* LaunchScreen.storyboard */; };
+		DDA84DD829B1941100C14AB4 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84DD629B1941100C14AB4 /* Location+CoreDataClass.swift */; };
+		DDA84DD929B1941100C14AB4 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA84DD729B1941100C14AB4 /* Location+CoreDataProperties.swift */; };
 		DDEE6B7129B05BAD00856B97 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE6B6F29B05BAC00856B97 /* Functions.swift */; };
 		DDEE6B7229B05BAD00856B97 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEE6B7029B05BAC00856B97 /* HudView.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		DDA6823629A4649B00F6C768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA6823929A4649B00F6C768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA6823B29A4649B00F6C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA84DD629B1941100C14AB4 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DDA84DD729B1941100C14AB4 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DDEE6B6F29B05BAC00856B97 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		DDEE6B7029B05BAC00856B97 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +54,8 @@
 		DDA6821E29A4649A00F6C768 = {
 			isa = PBXGroup;
 			children = (
+				DDA84DD629B1941100C14AB4 /* Location+CoreDataClass.swift */,
+				DDA84DD729B1941100C14AB4 /* Location+CoreDataProperties.swift */,
 				DDA6822929A4649A00F6C768 /* MyLocations */,
 				DDA6822829A4649A00F6C768 /* Products */,
 			);
@@ -157,8 +163,10 @@
 				DDA6822F29A4649A00F6C768 /* CurrentLocationViewController.swift in Sources */,
 				DDA6822B29A4649A00F6C768 /* AppDelegate.swift in Sources */,
 				DDEE6B7129B05BAD00856B97 /* Functions.swift in Sources */,
+				DDA84DD929B1941100C14AB4 /* Location+CoreDataProperties.swift in Sources */,
 				DDEE6B7229B05BAD00856B97 /* HudView.swift in Sources */,
 				DDA6823529A4649A00F6C768 /* MyLocations.xcdatamodeld in Sources */,
+				DDA84DD829B1941100C14AB4 /* Location+CoreDataClass.swift in Sources */,
 				DDA6822D29A4649A00F6C768 /* SceneDelegate.swift in Sources */,
 				DD7CE90C29AA99250028BA5E /* LocationDetailsViewController.swift in Sources */,
 			);
