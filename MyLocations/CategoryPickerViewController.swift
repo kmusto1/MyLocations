@@ -10,7 +10,6 @@ import UIKit
 class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
     
-    // Preset categories.
     let categories = [
         "No Category",
         "Apple Store",
@@ -27,7 +26,6 @@ class CategoryPickerViewController: UITableViewController {
     
     var selectedIndexPath = IndexPath()
     
-    // Adds category rows based of number of categories.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +36,7 @@ class CategoryPickerViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PickedCategory" {
@@ -54,7 +52,6 @@ class CategoryPickerViewController: UITableViewController {
         return categories.count
     }
     
-    // Returns selected cells.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
@@ -69,7 +66,6 @@ class CategoryPickerViewController: UITableViewController {
         return cell
     }
     
-    // Checkmark item when chosen.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row != selectedIndexPath.row {
             if let newCell = tableView.cellForRow(at: indexPath) {
