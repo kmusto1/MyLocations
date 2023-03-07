@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,22 +9,39 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="jiu-u1-EIB">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="am6-IZ-5BC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h0T-1e-Nlh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="I0X-Z0-eqq">
+                                <rect key="frame" x="107" y="144" width="200" height="200"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar" translatesAutoresizingMaskIntoConstraints="NO" id="yWF-qp-ijf">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v0b-xk-Gj9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I0X-Z0-eqq" firstAttribute="centerX" secondItem="h0T-1e-Nlh" secondAttribute="centerX" id="3r9-RN-5tG"/>
+                            <constraint firstAttribute="trailing" secondItem="yWF-qp-ijf" secondAttribute="trailing" id="EK2-9y-llK"/>
+                            <constraint firstItem="I0X-Z0-eqq" firstAttribute="top" secondItem="v0b-xk-Gj9" secondAttribute="top" constant="100" id="J0s-2e-aFO"/>
+                            <constraint firstItem="yWF-qp-ijf" firstAttribute="leading" secondItem="v0b-xk-Gj9" secondAttribute="leading" id="SrJ-yP-usZ"/>
+                            <constraint firstItem="yWF-qp-ijf" firstAttribute="bottom" secondItem="v0b-xk-Gj9" secondAttribute="bottom" id="hor-pN-8Le"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXf-im-g4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="200" height="200"/>
+        <image name="tabbar" width="375" height="49.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
