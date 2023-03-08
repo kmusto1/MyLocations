@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARy-lP-qpd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="2"/>
+            <point key="canvasLocation" x="1478" y="1"/>
         </scene>
         <!--Locations-->
         <scene sceneID="xKY-ih-Yf1">
@@ -599,7 +599,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3ck-qa-jlA"/>
+        <segue reference="ZHd-QX-Oph"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>

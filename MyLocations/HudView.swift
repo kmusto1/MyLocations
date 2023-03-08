@@ -20,6 +20,7 @@ class HudView: UIView {
         return hudView
     }
     
+    // Displays box with checkmark.
     override func draw(_ rect: CGRect) {
         let boxWidth: CGFloat = 96
         let boxHeight: CGFloat = 96

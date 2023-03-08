@@ -16,6 +16,7 @@ public class Location: NSManagedObject, MKAnnotation {
         return CLLocationCoordinate2DMake(latitude, longitude)
     }
     
+    // Title.
     public var title: String? {
         if locationDescription.isEmpty {
             return "(No Description)"
@@ -24,6 +25,7 @@ public class Location: NSManagedObject, MKAnnotation {
         }
     }
     
+    // Subtitle.
     public var subtitle: String? {
         return category
     }
@@ -32,6 +34,7 @@ public class Location: NSManagedObject, MKAnnotation {
         return photoID != nil
     }
     
+    //
     var photoURL: URL {
         assert(photoID != nil, "No photo ID set")
         let filename = "Photo-\(photoID!.intValue).jpg"
@@ -42,6 +45,7 @@ public class Location: NSManagedObject, MKAnnotation {
         return UIImage(contentsOfFile: photoURL.path)
     }
     
+    // Gives photos unique IDs.
     class func nextPhotoID() -> Int {
         let userDefaults = UserDefaults.standard
         let currentID = userDefaults.integer(forKey: "PhotoID") + 1
@@ -49,6 +53,7 @@ public class Location: NSManagedObject, MKAnnotation {
         return currentID
     }
     
+    // Removes photo from system.
     func removePhotoFile() {
         if hasPhoto {
             do {

@@ -48,6 +48,7 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     
+    // Displays labels on load.
     override func viewDidLoad() {
         super.viewDidLoad()
         if let location = locationToEdit {
@@ -91,6 +92,7 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     
+    // Actions for when done button is pressed.
     // MARK: - Actions
     @IBAction func done() {
         guard let mainView = navigationController?.parent?.view else { return }
@@ -140,10 +142,12 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     
+    // Action for when cancel button is pressed.
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
     }
     
+    // Selects category.
     @IBAction func categoryPickerDidPickCategory(_ segue: UIStoryboardSegue) {
         let controller = segue.source as! CategoryPickerViewController
         categoryName = controller.selectedCategoryName
@@ -162,6 +166,7 @@ class LocationDetailsViewController: UITableViewController {
       return line
     }
     
+    // Formats date.
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
     }
@@ -176,6 +181,7 @@ class LocationDetailsViewController: UITableViewController {
         descriptionTextView.resignFirstResponder()
     }
     
+    // Shows photo.
     func show(image: UIImage) {
         imageView.image = image
         imageView.isHidden = false

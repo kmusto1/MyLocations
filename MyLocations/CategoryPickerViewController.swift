@@ -10,6 +10,7 @@ import UIKit
 class CategoryPickerViewController: UITableViewController {
     var selectedCategoryName = ""
     
+    // List of categories.
     let categories = [
         "No Category",
         "Apple Store",
@@ -78,4 +79,3 @@ class CategoryPickerViewController: UITableViewController {
         }
     }
 }
-
